@@ -1,22 +1,36 @@
-# Vertex Automation: Lead Handling Script (Prototype v1.0)
-# Purpose: Researching data flow from web-forms to CRM API
+import json
+import datetime
 
-def process_lead(name, interest_type):
+# Vertex Automation: Lead Handling Logic v1.0
+# Purpose: Normalizes unstructured realtor data into CRM-ready JSON
+
+def process_lead(name, email, property_interest, budget):
     """
-    Standardizes lead data for Richmond Hill real estate analysis.
+    Simulates the intake of a raw lead and timestamps it for the brokerage.
     """
-    print(f"Vertex System: Analyzing lead for {name}...")
+    # 1. Generate a timestamp for the "Speed-to-Lead" metric
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
-    lead_data = {
-        "entity": name,
-        "type": interest_type,
-        "status": "RESEARCH_LOGGED",
-        "lab_id": "ST-ROB-10"
+    # 2. Structure the data (The "JSON" part)
+    lead_packet = {
+        "status": "NEW_INTAKE",
+        "source": "Vertex_Web_Form",
+        "timestamp": timestamp,
+        "client_data": {
+            "name": name,
+            "contact": email,
+            "target_property": property_interest,
+            "budget_range": budget
+        },
+        "routing": "High_Priority_Queue"
     }
     
-    return lead_data
+    # 3. "Log" the action (Simulating a database save)
+    print(f"[VERTEX SYSTEM] Processing lead for {name} at {timestamp}...")
+    return json.dumps(lead_packet, indent=4)
 
-# Run mock analysis
+# Test the system (This runs when you open the file)
 if __name__ == "__main__":
-    test_lead = process_lead("Sample Client", "Residential Purchase")
-    print(f"Data Normalized: {test_lead}")
+    test_result = process_lead("Test Client", "client@gmail.com", "123 Bayview Ave", "$1.5M")
+    print("System Output:")
+    print(test_result)

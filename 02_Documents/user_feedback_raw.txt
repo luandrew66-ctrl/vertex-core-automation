@@ -1,0 +1,20 @@
+=== BETA TEST FEEDBACK DUMP (Feb 2026) ===
+Source: SMS / Discord DMs / Email
+Status: Anonymized for Privacy (GDPR)
+
+[User_01 - SMS - Feb 14, 10:42 AM]
+"hey just tried the link. works fine on my laptop but the submit button is kinda small? maybe make it bigger for old ppl lol. otherwise cool."
+
+[User_02 - Email - Feb 14, 11:20 AM]
+"SUBJECT: Error on mobile??
+Hi, I tried submitting the form from my iPhone (Safari) and it just spins and gives a 404 error. My wifi is fine. Let me know if i did something wrong."
+
+[User_02 - SMS - Feb 14, 2:05 PM]
+"ok works now. super fast. thx for fixing it so quick."
+
+[User_03 - Discord - Feb 15, 9:30 AM]
+"Yo i ran the bulk upload with that csv file u sent. took like 1 sec. crazy fast. 
+btw the font on the 'thank you' page is hard to read in dark mode. just fyi."
+
+[User_01 - SMS - Feb 15, 11:15 AM]
+"no lag on my end today. looks stable."
